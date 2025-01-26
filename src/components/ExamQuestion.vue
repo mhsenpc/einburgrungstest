@@ -1,7 +1,8 @@
 <template>
   <div class="question-container">
     <div class="question-text">
-      {{ question.text }}
+      <div class="primary-text">{{ question.text }}</div>
+      <div v-if="question.translation" class="translation-text">{{ question.translation }}</div>
     </div>
     
     <div v-if="question.image" class="question-image">
@@ -14,9 +15,17 @@
         :key="answer.id"
         :type="isSelected(answer) ? 'primary' : 'default'"
         class="answer-button"
+        size="large"
+        round
+        :plain="!isSelected(answer)"
         @click="selectAnswer(answer)"
       >
-        {{ answer.text }}
+        <div class="primary-text">
+          {{ answer.text }} 
+          <br/> 
+          {{ answer.translation }}
+        </div>
+        
       </el-button>
     </div>
 
@@ -25,21 +34,36 @@
         @click="$emit('prev')"
         :disabled="!canNavigatePrev"
       >
-        <el-icon><arrow-left /></el-icon>
-        قبلی
+        <el-tooltip
+          content="قبلی"
+          placement="top"
+          effect="light"
+        >
+          <el-icon><ArrowLeft /></el-icon>
+        </el-tooltip>
       </el-button>
 
       <el-button @click="$emit('skip')">
-        <el-icon><position /></el-icon>
-        رد کردن
+        <el-tooltip
+          content="رد کردن"
+          placement="top"
+          effect="light"
+        >
+          <el-icon><position /></el-icon>
+        </el-tooltip>
       </el-button>
 
       <el-button
         @click="$emit('next')"
         :disabled="!canNavigateNext"
       >
-        بعدی
-        <el-icon><arrow-right /></el-icon>
+        <el-tooltip
+          content="بعدی"
+          placement="top"
+          effect="light"
+        >
+          <el-icon><arrow-right /></el-icon>
+        </el-tooltip>
       </el-button>
     </div>
   </div>
@@ -101,6 +125,16 @@ export default {
   text-align: right;
 }
 
+.primary-text {
+  margin-bottom: 0.5rem;
+}
+
+.translation-text {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
 .question-image {
   margin-bottom: 2rem;
 }
@@ -121,7 +155,13 @@ export default {
   text-align: right;
   height: auto;
   white-space: normal;
-  padding: 15px;
+  padding: 15px 25px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.answer-button:hover {
+  transform: translateX(-5px);
 }
 
 .navigation-buttons {

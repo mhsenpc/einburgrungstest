@@ -25,6 +25,13 @@
     <div v-else>
       <div class="progress-info">
         <span>سوال {{ currentQuestionIndex + 1 }} از {{ questions.length }}</span>
+        <el-progress 
+          :percentage="answeredPercentage" 
+          :format="format => `${Object.keys(selectedAnswers).length} / ${questions.length}`"
+          class="question-progress"
+          :stroke-width="20"
+          :color="progressColor"
+        />
       </div>
 
       <ExamQuestion
@@ -65,6 +72,17 @@ export default {
     const currentQuestion = computed(() => 
       questions.value[currentQuestionIndex.value] || null
     )
+
+    const answeredPercentage = computed(() => {
+      return Math.round((Object.keys(selectedAnswers.value).length / questions.value.length) * 100) || 0
+    })
+
+    const progressColor = computed(() => {
+      const percentage = answeredPercentage.value
+      if (percentage < 30) return '#ff4949'
+      if (percentage < 70) return '#e6a23c'
+      return '#67c23a'
+    })
 
     const startExam = () => {
       questions.value = getRandomQuestions(30)
@@ -127,7 +145,9 @@ export default {
       handleAnswerSelect,
       nextQuestion,
       previousQuestion,
-      skipQuestion
+      skipQuestion,
+      answeredPercentage,
+      progressColor
     }
   }
 }
@@ -189,5 +209,8 @@ export default {
   margin-bottom: 20px;
   font-size: 1.2rem;
   color: #666;
+}
+.question-progress {
+  margin-top: 10px;
 }
 </style>
