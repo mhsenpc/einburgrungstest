@@ -28,7 +28,7 @@
         <span>سوال {{ currentQuestionIndex + 1 }} از {{ questions.length }}</span>
         <el-progress 
           :percentage="answeredPercentage" 
-          :format="format => `${Object.keys(selectedAnswers).length} / ${questions.length}`"
+          :format="format => ``"
           class="question-progress"
           :stroke-width="20"
           :color="progressColor"

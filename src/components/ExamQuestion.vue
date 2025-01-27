@@ -2,7 +2,7 @@
   <div class="question-container">
     <div class="question-text">
       <div class="primary-text">{{ question.text }}</div>
-      <div v-if="question.translation" class="translation-text">{{ question.translation }}</div>
+      <div class="translation-text">{{ question.translation }}</div>
     </div>
     
     <div v-if="question.image" class="question-image">
@@ -22,7 +22,8 @@
         @click="selectAnswer(answer)"
       >
         <div class="primary-text">
-          {{ answer.text }} 
+          <b>{{ answer.text }} </b>
+          <br/>
           <br/> 
           {{ answer.translation }}
         </div>
@@ -139,12 +140,16 @@ export default {
 
 .primary-text {
   margin-bottom: 0.5rem;
+  direction: ltr;
+  text-align: left;
 }
 
 .translation-text {
   font-size: 0.9em;
   color: #666;
   margin-top: 0.25rem;
+  direction: rtl;
+  text-align: right;
 }
 
 .question-image {
