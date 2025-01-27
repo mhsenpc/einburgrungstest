@@ -37,7 +37,7 @@
 
       <ExamQuestion
         :question="currentQuestion"
-        :selectedAnswer="selectedAnswers[currentQuestion.id]"
+        :selectedAnswer="selectedAnswers[currentQuestionIndex]"
         :canNavigatePrev="currentQuestionIndex > 0"
         :canNavigateNext="currentQuestionIndex < questions.length - 1"
         @select-answer="handleAnswerSelect"
@@ -118,8 +118,8 @@ export default {
     }
 
     const handleAnswerSelect = (answer) => {
-      selectedAnswers.value[currentQuestion.value.id] = answer
-      if (currentQuestionIndex.value +1 === questions.value.length) {
+      selectedAnswers.value[currentQuestionIndex.value] = answer
+      if (currentQuestionIndex.value + 1 === questions.value.length) {
         examStatus.value = "completed";
         clearInterval(timer)
       }

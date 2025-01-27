@@ -1,6 +1,5 @@
 export const questions = [
   {
-    id: 1,
     text: "In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil ...?",
     translation: "در آلمان مردم مجازند بدون واهمه نظرات خود را بر علیه دولت این کشور ابراز کنند، زیرا که",
     image: null,
@@ -12,7 +11,6 @@ export const questions = [
     ]
   },
   {
-    id: 2,
     text: "Deutschland ist ein Rechtsstaat. Was ist damit gemeint?",
     translation: "آلمان کشوری است قانونمند. منظور از این جمله چیست؟",
     image: null,
@@ -24,7 +22,6 @@ export const questions = [
     ]
   },
   {
-    id: 3,
     text: "In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am ...",
     translation: "در کشور آلمان والدین می توانند تا 14 سالگی بچه شان تصمیم بگیرند : که آیا او در مدرسه در کلاس ... شرکت کند یا نه",
     image: null,
