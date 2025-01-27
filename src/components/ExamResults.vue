@@ -20,6 +20,9 @@
     <div class="success-rate">
       <h2>درصد موفقیت</h2>
       <div class="percentage">{{ successRate }}%</div>
+      <div class="exam-status" :class="{ 'passed': hasPassed, 'failed': !hasPassed }">
+        {{ hasPassed ? 'قبول' : 'مردود' }}
+      </div>
     </div>
 
     <div class="chart-container">
@@ -74,6 +77,10 @@ export default {
       return Math.round((correctAnswers.value / props.questions.length) * 100)
     })
 
+    const hasPassed = computed(() => {
+      return correctAnswers.value >= 15
+    })
+
     const chartConfig = computed(() => ({
       data: {
         labels: ['پاسخ‌های صحیح', 'پاسخ‌های نادرست', 'سوالات بی‌پاسخ'],
@@ -104,7 +111,8 @@ export default {
       incorrectAnswers,
       skippedAnswers,
       successRate,
-      chartConfig
+      chartConfig,
+      hasPassed
     }
   }
 }
@@ -163,6 +171,25 @@ export default {
   font-size: 3rem;
   font-weight: bold;
   color: #409EFF;
+}
+
+.exam-status {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.exam-status.passed {
+  background-color: #67C23A;
+  color: white;
+}
+
+.exam-status.failed {
+  background-color: #F56C6C;
+  color: white;
 }
 
 .chart-container {
