@@ -1,11 +1,11 @@
 <template>
   <div class="exam-container">
-    <div class="timer" v-if="examStarted">
+    <div class="timer" v-if="examStatus == 'in_progress'">
       <el-icon><timer /></el-icon>
       {{ formatTime(timeRemaining) }}
     </div>
 
-    <div v-if="!examStarted" class="start-page">
+    <div v-if="examStatus == 'not_started'" class="start-page">
       <h1>آزمون تابعیت آلمان</h1>
       <div class="exam-info">
         <p>به آزمون تابعیت آلمان خوش آمدید.</p>
@@ -22,7 +22,7 @@
       </el-button>
     </div>
 
-    <div v-else>
+    <div v-if="examStatus == 'in_progress'">
       <div class="progress-info">
         <span>سوال {{ currentQuestionIndex + 1 }} از {{ questions.length }}</span>
         <el-progress 
@@ -45,6 +45,13 @@
         @skip="skipQuestion"
       />
     </div>
+    <div v-if="examStatus == 'completed'">
+      <ExamResults
+        :questions="questions"
+        :selectedAnswers="selectedAnswers"
+        @restart="startExam"
+      />
+    </div>
   </div>
 </template>
 
@@ -52,6 +59,7 @@
 import { ref, computed, onBeforeUnmount } from 'vue'
 import { Timer, VideoPlay } from '@element-plus/icons-vue'
 import ExamQuestion from '@/components/ExamQuestion.vue'
+import ExamResults from '@/components/ExamResults.vue'
 import { getRandomQuestions } from '@/data/questions'
 
 export default {
@@ -59,10 +67,11 @@ export default {
   components: {
     ExamQuestion,
     Timer,
-    VideoPlay
+    VideoPlay,
+    ExamResults
   },
   setup() {
-    const examStarted = ref(false)
+    const examStatus = ref("not_started")
     const questions = ref([])
     const currentQuestionIndex = ref(0)
     const selectedAnswers = ref({})
@@ -86,7 +95,7 @@ export default {
 
     const startExam = () => {
       questions.value = getRandomQuestions(30)
-      examStarted.value = true
+      examStatus.value = "in_progress";
       startTimer()
     }
 
@@ -109,11 +118,18 @@ export default {
 
     const handleAnswerSelect = (answer) => {
       selectedAnswers.value[currentQuestion.value.id] = answer
+      if (currentQuestionIndex.value +1 === questions.value.length) {
+        examStatus.value = "completed";
+        clearInterval(timer)
+      }
     }
 
     const nextQuestion = () => {
       if (currentQuestionIndex.value < questions.value.length - 1) {
         currentQuestionIndex.value++
+      } else if (currentQuestionIndex.value +1 === questions.value.length) {
+        examStatus.value = "completed";
+        clearInterval(timer)
       }
     }
 
@@ -134,7 +150,7 @@ export default {
     })
 
     return {
-      examStarted,
+      examStatus,
       questions,
       currentQuestionIndex,
       currentQuestion,
