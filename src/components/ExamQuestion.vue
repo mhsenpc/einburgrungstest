@@ -18,6 +18,7 @@
         size="large"
         round
         :plain="!isSelected(answer)"
+        :disabled="isLoading"
         @click="selectAnswer(answer)"
       >
         <div class="primary-text">
@@ -71,6 +72,7 @@
 
 <script>
 import { ArrowLeft, ArrowRight, Position } from '@element-plus/icons-vue'
+import { ref } from 'vue'
 
 export default {
   name: 'ExamQuestion',
@@ -97,14 +99,24 @@ export default {
       default: true
     }
   },
+  setup() {
+    const isLoading = ref(false)
+    
+    return {
+      isLoading
+    }
+  },
   methods: {
     isSelected(answer) {
       return this.selectedAnswer && this.selectedAnswer.id === answer.id
     },
     selectAnswer(answer) {
+      if (this.isLoading) return
+      this.isLoading = true
       this.$emit('select-answer', answer)
       setTimeout(() => {
         this.$emit('next')
+        this.isLoading = false
       }, 1000)
     }
   }
