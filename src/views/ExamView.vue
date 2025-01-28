@@ -1,8 +1,14 @@
 <template>
   <div class="exam-container">
-    <div class="timer" v-if="examStatus == 'in_progress'">
-      <el-icon><timer /></el-icon>
-      {{ formatTime(timeRemaining) }}
+    <div class="exam-header" v-if="examStatus == 'in_progress'">
+      <div class="translation-toggle">
+        <el-checkbox v-model="showTranslation">نمایش ترجمه</el-checkbox>
+      </div>
+      <div class="timer">
+        <el-icon><timer /></el-icon>
+        {{ formatTime(timeRemaining) }}
+      </div>
+
     </div>
 
     <div v-if="examStatus == 'not_started'" class="start-page">
@@ -31,13 +37,14 @@
           :format="format => ``"
           class="question-progress"
           :stroke-width="20"
-          :color="progressColor"
+          color="#ecae62"
         />
       </div>
 
       <ExamQuestion
         :question="currentQuestion"
         :selectedAnswer="selectedAnswers[currentQuestionIndex]"
+        :showTranslation="showTranslation"
         :canNavigatePrev="currentQuestionIndex > 0"
         :canNavigateNext="currentQuestionIndex < questions.length - 1"
         @select-answer="handleAnswerSelect"
@@ -77,6 +84,7 @@ export default {
     const currentQuestionIndex = ref(0)
     const selectedAnswers = ref({})
     const timeRemaining = ref(60 * 60) // 60 minutes in seconds
+    const showTranslation = ref(true)
     let timer
 
     const currentQuestion = computed(() => 
@@ -85,13 +93,6 @@ export default {
 
     const answeredPercentage = computed(() => {
       return Math.round((Object.keys(selectedAnswers.value).length / questions.value.length) * 100) || 0
-    })
-
-    const progressColor = computed(() => {
-      const percentage = answeredPercentage.value
-      if (percentage < 30) return '#ff4949'
-      if (percentage < 70) return '#e6a23c'
-      return '#67c23a'
     })
 
     const startExam = () => {
@@ -164,7 +165,7 @@ export default {
       previousQuestion,
       skipQuestion,
       answeredPercentage,
-      progressColor
+      showTranslation
     }
   }
 }
@@ -178,10 +179,17 @@ export default {
   direction: rtl;
 }
 
-.timer {
+.exam-header {
   position: fixed;
   top: 20px;
   left: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  z-index: 1000;
+}
+
+.timer {
   background-color: #42b983;
   color: white;
   padding: 10px 20px;
@@ -189,7 +197,13 @@ export default {
   display: flex;
   align-items: center;
   gap: 8px;
-  z-index: 1000;
+}
+
+.translation-toggle {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .start-page {

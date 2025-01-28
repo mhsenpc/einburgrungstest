@@ -2,13 +2,13 @@
   <div class="question-container">
     <div class="question-text">
       <div class="primary-text">{{ question.text }}</div>
-      <div class="translation-text">{{ question.translation }}</div>
+      <div v-if="showTranslation" class="translation-text">{{ question.translation }}</div>
     </div>
-    
+      
     <div v-if="question.image" class="question-image">
       <img :src="question.image" :alt="question.text">
     </div>
-
+  
     <div class="answers-container">
       <el-button
         v-for="answer in question.answers"
@@ -22,12 +22,11 @@
         @click="selectAnswer(answer)"
       >
         <div class="primary-text">
-          <b>{{ answer.text }} </b>
-          <br/>
-          <br/> 
-          {{ answer.translation }}
+          <b>{{ answer.text }}</b>
+          <div v-if="showTranslation" class="translation-text">
+            {{ answer.translation }}
+          </div>
         </div>
-        
       </el-button>
     </div>
 
@@ -98,6 +97,10 @@ export default {
     canNavigateNext: {
       type: Boolean,
       default: true
+    },
+    showTranslation: {
+      type: Boolean,
+      required: true
     }
   },
   setup() {
@@ -130,6 +133,11 @@ export default {
   margin: 0 auto;
   padding: 20px;
   direction: rtl;
+}
+
+.translation-toggle {
+  text-align: right;
+  margin-bottom: 1rem;
 }
 
 .question-text {
