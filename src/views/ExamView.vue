@@ -12,9 +12,9 @@
     </div>
 
     <div v-if="examStatus == 'not_started'" class="start-page">
-      <h1>آزمون تابعیت آلمان</h1>
+      <h1>آزمون شهروندی آلمان</h1>
       <div class="exam-info">
-        <p>به آزمون تابعیت آلمان خوش آمدید.</p>
+        <p>به آزمون شهروندی آلمان خوش آمدید.</p>
         <ul>
           <li>این آزمون شامل 33 سوال است</li>
           <li>برای قبولی در این آزمون باید حداقل ۱۵ پاسخ صحیح انتخاب کنید</li>
@@ -96,7 +96,7 @@ export default {
     })
 
     const startExam = () => {
-      questions.value = getRandomQuestions(30)
+      questions.value = getRandomQuestions(33)
       examStatus.value = "in_progress";
       startTimer()
     }
