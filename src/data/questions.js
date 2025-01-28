@@ -745,7 +745,7 @@ export const questions = [
 },
 {
   text: "Was ist kein Merkmal unserer Demokratie?",
-  translation: "کدامیک از موارد زیر ویژه گی دموکراسی ما نیست؟",
+  translation: "کدامیک از موارد زیر ویژگی دموکراسی ما نیست؟",
   image: null,
   answers: [
     {
@@ -869,7 +869,7 @@ export const questions = [
 },
 {
   text: "Welche Maßnahme schafft in Deutschland soziale Sicherheit?",
-  translation: "چه ضابطهای در آلمان امنیت اجتماعی را تامین میکند؟",
+  translation: "چه اقدامی در آلمان امنیت اجتماعی را تامین میکند؟",
   image: null,
   answers: [
     {
@@ -1445,7 +1445,7 @@ export const questions = [
     {
       id: 3,
       text: "Menschen von einer Privatpolizei ohne Grund verhaftet werden.",
-      translation: "مردم توسط \"پلیس لباس شخصی\" بیدلیل دستگیر بشوند",
+      translation: "مردم توسط \"پلیس لباس شخصی\" بی دلیل دستگیر بشوند",
       correct: true
     },
     {
@@ -1513,7 +1513,7 @@ export const questions = [
       {
         id: 4,
         text: "ein Abgeordneter / eine Abgeordnete der stärksten Fraktion",
-        translation: "نمایندهای از قویترین جناح حزبی مجلس شورای آلمان",
+        translation: "نماینده ای از قویترین جناح حزبی مجلس شورای آلمان",
         correct: true
       }
     ]
@@ -1854,7 +1854,7 @@ export const questions = [
     {
       id: 4,
       text: "Er / Sie schlägt den Kanzler / die Kanzlerin zur Wahl vor.",
-      translation: "پیشنهاد انتخاب نمایندهای برای سمت صدراعظم",
+      translation: "پیشنهاد انتخاب نماینده ای برای سمت صدراعظم",
       correct: true
     }
   ]
@@ -1884,8 +1884,8 @@ export const questions = [
     },
     {
       id: 4,
-      text: "Angela Merkel",
-      translation: "Angela Merkel",
+      text: "Olaf Scholz",
+      translation: "Olaf Scholz",
       correct: true
     }
   ]
@@ -2357,7 +2357,7 @@ export const questions = [
 },
 {
   text: "Wer wählt den deutschen Bundeskanzler / die deutsche Bundeskanzlerin?",
-  translation: "کدامیک از موارد زیر صدرالعظم آلمان را انتخاب میکند؟",
+  translation: "کدامیک از موارد زیر صدر اعظم آلمان را انتخاب میکند؟",
   image: null,
   answers: [
     {
@@ -2511,7 +2511,7 @@ export const questions = [
   },
 {
     text: "Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem ...",
-    translation: "به چه صورت میتوان در آلمان از کسانی که در زمینههای سیاسی، اقتصادی، فرهنگی، ذهنی و اجتماعی نقش برجستهای را ایفا نموده اند، قدردانی نمود؟ به وسیله اعطا ...",
+    translation: "به چه صورت میتوان در آلمان از کسانی که در زمینه های سیاسی، اقتصادی، فرهنگی، ذهنی و اجتماعی نقش برجستهای را ایفا نموده اند، قدردانی نمود؟ به وسیله اعطا ...",
     image: null,
     answers: [
       {
@@ -2880,37 +2880,6 @@ export const questions = [
       }
     ]
   },
-{
-    text: "Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem ...",
-    translation: "به چه صورت میتوان در آلمان از کسانی که در زمینههای سیاسی، اقتصادی، فرهنگی، ذهنی و اجتماعی نقش برجستهای را ایفا نموده اند، قدردانی نمود؟ به وسیله اعطا ...",
-    image: null,
-    answers: [
-      {
-        id: 1,
-        text: "Bundesverdienstkreuz",
-        translation: "نشان افتخار ملی",
-        correct: true
-      },
-      {
-        id: 2,
-        text: "Bundesadler",
-        translation: "نشان عقاب ملی",
-        correct: false
-      },
-      {
-        id: 3,
-        text: "Vaterländischen Verdienstorden",
-        translation: "مدال افتخار شایستگی ملی",
-        correct: false
-      },
-      {
-        id: 4,
-        text: "Ehrentitel \"Held der Deutschen Demokratischen Republik\"",
-        translation: "لقب افتخاری \"قهرمان جمهوری دمکراتیک آلمان\"",
-        correct: false
-      }
-    ]
-},
 {
     text: "Eine Frau in Deutschland verliert ihre Arbeit. Was darf nicht der Grund für diese Entlassung sein?",
     translation: "خانمی در آلمان کارش را از دست میدهد. کدامیک از دلایل زیر نباید دلیل اخراج او باشد؟",
@@ -3365,7 +3334,7 @@ export const questions = [
       {
         id: 3,
         text: "Basiswert",
-        translation: "میزان پایهای آرا",
+        translation: "میزان پایه ای آرا",
         correct: false
       },
       {
@@ -3378,7 +3347,7 @@ export const questions = [
 },
 {
     text: "Welchem Grundsatz unterliegen Wahlen in Deutschland? Wahlen in Deutschland sind ...",
-    translation: "ویژگیهای پایهای انتخابات آلمان چیست؟",
+    translation: "ویژگیهای پایه ای انتخابات آلمان چیست؟",
     image: null,
     answers: [
       {
@@ -3787,7 +3756,7 @@ export const questions = [
       {
         id: 1,
         text: "Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.",
-        translation: "یا به یک تشکل موجود، که هدفش حفظ خط اتوبوسرانی میباشد، میپیوندم، و یا اینکه خود اقدام به پایهگذاری چنین نهادی میکنم",
+        translation: "یا به یک تشکل موجود، که هدفش حفظ خط اتوبوسرانی میباشد، میپیوندم، و یا اینکه خود اقدام به پایه گذاری چنین نهادی میکنم",
         correct: true
       },
       {
@@ -3805,7 +3774,7 @@ export const questions = [
       {
         id: 4,
         text: "Ich schreibe einen Brief an das Forstamt der Gemeinde.",
-        translation: "نامهای به اداره جنگلبانی ناحیه مینویسم",
+        translation: "نامه ای به اداره جنگلبانی ناحیه مینویسم",
         correct: false
       }
     ]
@@ -4289,7 +4258,7 @@ export const questions = [
       {
         id: 2,
         text: "Beginn des Berliner Mauerbaus",
-        translation: "شروع ساخت دیوار برلن",
+        translation: "شروع ساخت دیوار برلین",
         correct: false
       },
       {
@@ -4512,7 +4481,7 @@ export const questions = [
       {
         id: 3,
         text: "den Aufbau der Wehrmacht.",
-        translation: "او ارتش را پایهریزی کرد",
+        translation: "او ارتش را پایه ریزی کرد",
         correct: false
       },
       {
@@ -5052,7 +5021,7 @@ export const questions = [
   },
 {
     text: "Wann baute die DDR die Mauer in Berlin?",
-    translation: "در چه سالی جمهوری دمکراتیک آلمان دیوار برلن را ساخت؟",
+    translation: "در چه سالی جمهوری دمکراتیک آلمان دیوار برلین را ساخت؟",
     image: null,
     answers: [
       {
@@ -5145,7 +5114,7 @@ export const questions = [
   },
 {
     text: "Wann wurde die Mauer in Berlin für alle geöffnet?",
-    translation: "در چه سالی دیوار برلن به روی مردم باز شد؟",
+    translation: "در چه سالی دیوار برلین به روی مردم باز شد؟",
     image: null,
     answers: [
       {
@@ -6912,7 +6881,7 @@ export const questions = [
   },
 {
     text: "Wenn man in Deutschland ein Kind schlägt, ...",
-    translation: "اگر در آلمان کسی بچهای را کتک بزند،",
+    translation: "اگر در آلمان کسی بچه ای را کتک بزند،",
     image: null,
     answers: [
       {
@@ -7191,7 +7160,7 @@ export const questions = [
   },
 {
     text: "In Deutschland hat ein Kind in der Schule ...",
-    translation: "کدامیک از موارد زیر برای بچههای مدرسه ای در آلمان حکم است؟",
+    translation: "کدامیک از موارد زیر برای بچه های مدرسه ای در آلمان حکم است؟",
     image: null,
     answers: [
       {
@@ -7625,7 +7594,7 @@ export const questions = [
   },
 {
     text: "Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?",
-    translation: "نامهای را در آلمان عمداً باز کردهاید باوجود اینکه برای شخص دیگری نوشته شده است. با این عمل چه چیزی را نادیده گرفتهاید؟",
+    translation: "نامه ای را در آلمان عمداً باز کرده اید باوجود اینکه برای شخص دیگری نوشته شده است. با این عمل چه چیزی را نادیده گرفته اید؟",
     image: null,
     answers: [
       {
@@ -7904,7 +7873,7 @@ export const questions = [
   },
 {
     text: "Was tun Sie, wenn Sie eine falsche Rechnung von einer deutschen Behörde bekommen?",
-    translation: "از ادارهای در آلمان صورت حساب غلطی دریافت میکنید. چگونه برخورد میکنید؟",
+    translation: "از اداره ای در آلمان صورت حساب غلطی دریافت میکنید. چگونه برخورد میکنید؟",
     image: null,
     answers: [
       {
@@ -8152,7 +8121,7 @@ export const questions = [
 },
 {
     text: "Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?",
-    translation: "در آلمان یک تلویزیون خریده اید ، در خانه بستهبندی آنرا باز میکنید و متوجه میشوید که کار نمیکند و خراب است. چه میتوانید بکنید؟",
+    translation: "در آلمان یک تلویزیون خریده اید ، در خانه بسته بندی آنرا باز میکنید و متوجه میشوید که کار نمیکند و خراب است. چه میتوانید بکنید؟",
     image: null,
     answers: [
       {
@@ -8369,7 +8338,7 @@ export const questions = [
 },
 {
     text: "Aus welchem Land sind die meisten Migranten / Migrantinnen nach Deutschland gekommen?",
-    translation: "بخش عمده مهاجرین از کدامین کشورها به آلمان آمدهاند؟",
+    translation: "بخش عمده مهاجرین از کدامین کشورها به آلمان آمده اند؟",
     image: null,
     answers: [
       {
