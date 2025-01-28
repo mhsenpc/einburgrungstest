@@ -622,7 +622,7 @@ export const questions = [
 {
   text: "Welches ist das Wappen der Bundesrepublik Deutschland? (Bild 21)",
   translation: "کدامیک از تصاویر زیر علامت پرچم کشور آلمان است؟",
-  image: "./پلتفرم آلمانی - تمامی 300 سوال آزمون زندگی در کشور آلمان _ پلتفرم آلمانی_files/img21.png",
+  image: "images/img21.png",
   answers: [
     {
       id: 1,
@@ -1831,7 +1831,7 @@ export const questions = [
 {
   text: "Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben des deutschen Bundespräsidenten / der deutschen Bundespräsidentin? (Bild 70)",
   translation: "تصویر زیر عکسی است که در آن رئیس جمهور وقت آلمان، Gustav Heinemann, در سال ۱۹۷۴ سند انتصاب صدر اعظمی آلمان غربی را به Helmut Schmidt اعطا میکند: کدامیک از موارد زیر جزو وظایف رئیس جمهور آلمان میباشد؟",
-  image: "./پلتفرم آلمانی - تمامی 300 سوال آزمون زندگی در کشور آلمان _ پلتفرم آلمانی_files/img70.png",
+  image: "images/img70.png",
   answers: [
     {
       id: 1,
@@ -3627,7 +3627,7 @@ export const questions = [
 {
     text: "Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? (Bild 130)",
     translation: "کدامیک از اوراق رأی گیری زیر برای شرکت در انتخابات مجلس شورا معتبر است؟) تصویر 130(",
-    image: null,
+    image: "images/img130.png",
     answers: [
       {
         id: 1,
@@ -4805,7 +4805,7 @@ export const questions = [
 {
     text: "Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt? (Bild 176)",
     translation: "بعد از 1945 منطق اشغالی آلمان چگونه تقسیم شدند؟) تصویر 176(",
-    image: null,
+    image: "images/img176.png",
     answers: [
       {
         id: 1,
@@ -4898,7 +4898,7 @@ export const questions = [
 {
     text: "Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken? (Bild 181)",
     translation: "سال ۱۹۷۰ ویلی برانت در مقابل اردوگاه یهودیان در ورشو به زانو نشست. هدف او از این حرکت چه بود؟ (تصویر ۱۸۱)",
-    image: null,
+    image: "images/img181.png",
     answers: [
       {
         id: 1,
@@ -5642,7 +5642,7 @@ export const questions = [
 {
     text: "Welches war das Wappen der Deutschen Demokratischen Republik? (Bild 209)",
     translation: "کدامیک از موارد زیر نشان جمهوری دمکراتیک آلمان بود؟) تصویر ۲۰۹(",
-    image: "209",
+    image: "images/img209.png",
     answers: [
       {
         id: 1,
@@ -5673,7 +5673,7 @@ export const questions = [
 {
     text: "Was bedeutete im Jahr 1989 in Deutschland das Wort \"Montagsdemonstration\"?",
     translation: "در سال ۱۹۸۹ در آلمان مفهوم \"تظاهرات دوشنبه\" چه بود؟",
-    image: null,
+    image: "images/img206.png",
     answers: [
       {
         id: 1,
@@ -5919,8 +5919,8 @@ export const questions = [
     ]
 },
 {
-    text: "Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen? (Bild 216)",
-    translation: "در پارلمان آلمان چه نمادی دیده میشود؟ (تصویر 216)",
+    text: "Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen?",
+    translation: "در پارلمان آلمان چه نمادی دیده میشود؟ ",
     image: null,
     answers: [
       {
@@ -6262,7 +6262,7 @@ export const questions = [
 {
     text: "Welche ist die Flagge der Europäischen Union? (Bild 226)",
     translation: "کدامیک از پرچمهای زیر پرچم اتحادیه اروپا است؟) تصویر 226(",
-    image: "226",
+    image: "images/img226.png",
     answers: [
       {
         id: 1,
@@ -6448,7 +6448,7 @@ export const questions = [
 {
     text: "Der französische Staatspräsident François Mitterrand und der deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich? (Bild 235)",
     translation: "در مراسم بزرگداشت قربانیان جنگهای جهانی اول و دوم در شهر Verdun, رئیس جمهور فرانسه Francois Mitterrand و صدر اعظم آلمان Helmut Kohl مشترکاً حضور داشتند. این ملاقات بر کدامیک از اهداف اتحادیه اروپا تأکید میکند؟) تصویر ۲۳۵(",
-    image: "235",
+    image: "images/img235.png",
     answers: [
       {
         id: 1,
