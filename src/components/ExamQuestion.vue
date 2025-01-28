@@ -31,16 +31,16 @@
     </div>
 
     <div class="navigation-buttons">
-      <el-button 
-        @click="$emit('prev')"
-        :disabled="!canNavigatePrev"
+      <el-button
+        @click="$emit('next')"
+        :disabled="!canNavigateNext"
       >
         <el-tooltip
-          content="قبلی"
+          content="بعدی"
           placement="top"
           effect="light"
         >
-          <el-icon><ArrowLeft /></el-icon>
+          <el-icon><arrow-right /></el-icon>
         </el-tooltip>
       </el-button>
 
@@ -54,18 +54,19 @@
         </el-tooltip>
       </el-button>
 
-      <el-button
-        @click="$emit('next')"
-        :disabled="!canNavigateNext"
+      <el-button 
+        @click="$emit('prev')"
+        :disabled="!canNavigatePrev"
       >
         <el-tooltip
-          content="بعدی"
+          content="قبلی"
           placement="top"
           effect="light"
         >
-          <el-icon><arrow-right /></el-icon>
+          <el-icon><ArrowLeft /></el-icon>
         </el-tooltip>
       </el-button>
+      
     </div>
   </div>
 </template>
@@ -121,7 +122,7 @@ export default {
       setTimeout(() => {
         this.$emit('next')
         this.isLoading = false
-      }, 1000)
+      }, 500)
     }
   }
 }
