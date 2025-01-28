@@ -23,7 +23,7 @@
       >
         <div class="primary-text">
           <b>{{ answer.text }}</b>
-          <div v-if="showTranslation" class="translation-text">
+          <div v-if="showTranslation" class="translation-text" style="padding-top: 10px;">
             {{ answer.translation }}
           </div>
         </div>
